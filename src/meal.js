@@ -10,10 +10,9 @@ function createMenuItem(name, price, type){
 }
 }
 
-function addIngredients() {
-
-ingredients.unshift('cheese')
-
+function addIngredients(toppings, array) {
+    array.push(toppings)
+    
 }
 
 
