@@ -12,7 +12,10 @@ function createMenuItem(name, price, type){
 
 function addIngredients(toppings, array) {
     array.push(toppings)
-    
+
+    }
+
+
 }
 
 
