@@ -20,31 +20,31 @@ function refundOrder(orderNumber , deliveryOrders){
 //     for (var i = 0; i < deliveryOrders.length; i++) {
 //       console.log(deliveryOrders[i].item + ', ' )
 //         }
-
-
-
-
-
 // Hard coded
-  function listItems(deliveryOrders){
-  return deliveryOrders[0].item + ", " + deliveryOrders[1].item + ", " + deliveryOrders[2].item
+//   function listItems(deliveryOrders){
+// return deliveryOrders[0].item + ", " + deliveryOrders[1].item + ", " + deliveryOrders[2].item
+// }
+//
+// // function listItems(deliveryOrders){
+//   for (var i = 0; i < deliveryOrders.length; i++){
+// return '' + deliveryOrders.item[i] + ', '   }
+// } need an array
+
+function listItems(deliveryOrders){
+  var foodItems = []
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    foodItems.push(deliveryOrders[i].item)
+      }
+return foodItems.join(', ')
+      }
+
+function searchOrder(){
+  var foodItems = []
+for (car i = 0; i < deliveryOrders.length; i++){
+  
+}
 }
 
-
-
-
-// {
-//   for (var i = 0; i < deliveryOrders.length; i++)
-//   return deliveryOrders.item[i]
-// }
-
-
-//   for (var i = 0; i < deliveryOrders.length; i++) {
-//     if (deliveryOrders[i].item > 0 ) {
-//       console.log(deliveryOrders[i])
-//       }
-//   }
-// }
 
 
 
@@ -52,5 +52,5 @@ module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-  // searchOrder
+searchOrder
 }
