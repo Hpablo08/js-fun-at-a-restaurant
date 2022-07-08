@@ -15,8 +15,10 @@ function refundOrder(orderNumber , deliveryOrders){
 }
 //hard coded
 function listItems(deliveryOrders) {
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    return item
 
-
+  }
 }
 
 
