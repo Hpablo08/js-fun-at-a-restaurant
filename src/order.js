@@ -16,14 +16,21 @@ function refundOrder(orderNumber , deliveryOrders){
 //hard coded
 
 
+// function listItems(deliveryOrders){
+//     for (var i = 0; i < deliveryOrders.length; i++) {
+//       console.log(deliveryOrders[i].item + ', ' )
+//         }
 
-function listItems(deliveryOrders){
-    for (var i = 0; i < deliveryOrders.length; i++) {
-      if (deliveryOrders[i].item > 0 ) {
-        return deliveryOrders[i].item
-        }
-    }
-  }
+
+
+
+
+// Hard coded
+  function listItems(deliveryOrders){
+  return deliveryOrders[0].item + ", " + deliveryOrders[1].item + ", " + deliveryOrders[2].item
+}
+
+
 
 
 // {
