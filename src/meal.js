@@ -10,12 +10,16 @@ function createMenuItem(name, price, type){
   type: type,
 }
 }
-
 function addIngredients(toppings, array) {
-    array.push(toppings)
-console.log(toppings)
+    if(!array.includes(toppings)) {
+    return array.push(toppings)
 
-}
+} }
+
+
+
+//method or for loop
+
 
 function formatPrice(price) {
 return `$${price}`
