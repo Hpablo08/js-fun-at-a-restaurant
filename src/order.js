@@ -14,12 +14,31 @@ function refundOrder(orderNumber , deliveryOrders){
 }
 }
 //hard coded
-function listItems(deliveryOrders) {
-  for (var i = 0; i < deliveryOrders.length; i++) {
-    return item
 
+
+
+function listItems(deliveryOrders){
+    for (var i = 0; i < deliveryOrders.length; i++) {
+      if (deliveryOrders[i].item > 0 ) {
+        return deliveryOrders[i].item
+        }
+    }
   }
-}
+
+
+// {
+//   for (var i = 0; i < deliveryOrders.length; i++)
+//   return deliveryOrders.item[i]
+// }
+
+
+//   for (var i = 0; i < deliveryOrders.length; i++) {
+//     if (deliveryOrders[i].item > 0 ) {
+//       console.log(deliveryOrders[i])
+//       }
+//   }
+// }
+
 
 
 module.exports = {
