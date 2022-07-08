@@ -38,14 +38,25 @@ function listItems(deliveryOrders){
 return foodItems.join(', ')
       }
 
-function searchOrder(){
-  var foodItems = []
-for (car i = 0; i < deliveryOrders.length; i++){
-  
-}
-}
-
-
+// function searchOrder(deliveryOrders, item){
+//   var foodItems = []
+// for (var i = 0; i < deliveryOrders.length; i++){
+//     if (deliveryOrders[i].item.includes('burger' && 'blt sandwich') } {}
+//
+//
+//   foodItems.push(deliveryOrders[i].item)
+//
+// return foodItems.join(', ')
+//     }
+ function searchOrder (deliveryOrders, foodItem){
+   for (var i = 0; i < deliveryOrders.length; i++) {
+    // if (deliveryOrders[i].item === 'sushi') {
+       console.log(deliveryOrders[i].item)
+     //   return false;
+     // } else {
+     // return true;
+   }
+  }
 
 
 module.exports = {
