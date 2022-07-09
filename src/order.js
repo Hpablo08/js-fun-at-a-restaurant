@@ -14,6 +14,9 @@ function refundOrder(orderNumber , deliveryOrders){
 }
 }
 //hard coded
+// function refundOrder(num, deliveryOrders){
+//   deliveryOrders.splice(0,1)
+// }
 
 
 // function listItems(deliveryOrders){
@@ -30,33 +33,47 @@ function refundOrder(orderNumber , deliveryOrders){
 // return '' + deliveryOrders.item[i] + ', '   }
 // } need an array
 
-function listItems(deliveryOrders){
+function listItems(deliveryOrders) {
   var foodItems = []
   for (var i = 0; i < deliveryOrders.length; i++) {
     foodItems.push(deliveryOrders[i].item)
-      }
-return foodItems.join(', ')
-      }
+  }
+  return foodItems.join(', ')
+}
 
-// function searchOrder(deliveryOrders, item){
-//   var foodItems = []
-// for (var i = 0; i < deliveryOrders.length; i++){
-//     if (deliveryOrders[i].item.includes('burger' && 'blt sandwich') } {}
-//
-//
+
+function searchOrder(deliveryOrders, items){
+  var answer = false
+  for (var i = 0; i < deliveryOrders.length; i ++) {
+    if (deliveryOrders[i].item.includes(items)){
+      answer = true
+    }
+  }
+  return answer
+}
+
+// variable is a place holder
+//function searchOrder(deliveryOrders, item) {
+//   for (var i = 0; i < deliveryOrders.length; i++) {
+//     deliveryOrders[i].item.includes(item)
+//     console.log(deliveryOrders[i].item, `hiiiii`)
+//   }
+//   return false
+// }
+//  console.log(deliveryOrders[i].item, `hiiiii`)
+
+
 //   foodItems.push(deliveryOrders[i].item)
 //
 // return foodItems.join(', ')
 //     }
- function searchOrder (deliveryOrders, foodItem){
-   for (var i = 0; i < deliveryOrders.length; i++) {
+ // function searchOrder (deliveryOrders, foodItem){
+ //   for (var i = 0; i < deliveryOrders.length; i++) {
     // if (deliveryOrders[i].item === 'sushi') {
-       console.log(deliveryOrders[i].item)
+       // console.log(deliveryOrders[i].item)
      //   return false;
      // } else {
      // return true;
-   }
-  }
 
 
 module.exports = {
