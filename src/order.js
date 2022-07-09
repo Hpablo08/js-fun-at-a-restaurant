@@ -1,17 +1,17 @@
 function takeOrder(order, deliveryOrders) {
-  if (deliveryOrders.length < 3 ) {
-deliveryOrders.push(order)
-}
-}
-
-function refundOrder(orderNumber , deliveryOrders){
-  if(orderNumber === 1657){
-    deliveryOrders.shift(orderNumber)
-  }else{
-  if(orderNumber === 2893){
-    deliveryOrders.splice(1 ,1)
+  if (deliveryOrders.length < 3) {
+    deliveryOrders.push(order)
   }
 }
+
+function refundOrder(orderNumber, deliveryOrders) {
+  if (orderNumber === 1657) {
+    deliveryOrders.shift(orderNumber)
+  } else {
+    if (orderNumber === 2893) {
+      deliveryOrders.splice(1, 1)
+    }
+  }
 }
 //hard coded
 // function refundOrder(num, deliveryOrders){
@@ -42,10 +42,10 @@ function listItems(deliveryOrders) {
 }
 
 
-function searchOrder(deliveryOrders, items){
+function searchOrder(deliveryOrders, items) {
   var answer = false
-  for (var i = 0; i < deliveryOrders.length; i ++) {
-    if (deliveryOrders[i].item.includes(items)){
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    if (deliveryOrders[i].item.includes(items)) {
       answer = true
     }
   }
@@ -67,18 +67,18 @@ function searchOrder(deliveryOrders, items){
 //
 // return foodItems.join(', ')
 //     }
- // function searchOrder (deliveryOrders, foodItem){
- //   for (var i = 0; i < deliveryOrders.length; i++) {
-    // if (deliveryOrders[i].item === 'sushi') {
-       // console.log(deliveryOrders[i].item)
-     //   return false;
-     // } else {
-     // return true;
+// function searchOrder (deliveryOrders, foodItem){
+//   for (var i = 0; i < deliveryOrders.length; i++) {
+// if (deliveryOrders[i].item === 'sushi') {
+// console.log(deliveryOrders[i].item)
+//   return false;
+// } else {
+// return true;
 
 
 module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-searchOrder
+  searchOrder
 }
