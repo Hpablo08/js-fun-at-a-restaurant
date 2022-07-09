@@ -18,16 +18,15 @@ function createRestaurant(name) {
 //     restaurant.menus.dinner.push(food)
 //   }
 // }
-function addMenuItem(restaurant, food) {
-  if (food.type === 'lunch') {
-    restaurant.menus.lunch.push(food)
-  } else if (food.type === 'breakfast') {
-    restaurant.menus.breakfast.push(food)
-  } else if (food.type === 'dinner') {
-    restaurant.menus.dinner.push(food)
-  }
+function addMenuItem(restaurant, food){
+  if (food.type === 'lunch' && !restaurant.menus.lunch.includes(food)){
+  restaurant.menus.lunch.push(food)
+} else if (food.type === 'dinner' && !restaurant.menus.dinner.includes(food)){
+  restaurant.menus.dinner.push(food)
+} else if (food.type === 'breakfast' && !restaurant.menus.breakfast.includes(food)){
+  restaurant.menus.breakfast.push(food);
 }
-
+}
 //for (var i = 0; i < restaurant.length; i++) {
 // if (restaurant[i].type.includes(lunch)) {
 // console.log(restaurant.menus.lunch.push(food))
