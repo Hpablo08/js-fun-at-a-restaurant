@@ -8,7 +8,6 @@ function createRestaurant(name) {
     },
   }
 }
-
 // function addMenuItem(restaurant, food) {
 //   if (food.type === 'lunch') {
 //     restaurant.menus.lunch.push(food)
@@ -51,18 +50,16 @@ function addMenuItem(restaurant, food){
   //   console.log(foodTime, `hellll`)
 
   function removeMenuItem(restaurant, typeOfFood, foodTime) {
-  console.log(restaurant.menus[foodTime])
-    if (restaurant.menus[foodTime] !== undefined){
-      for (var i = 0; i < restaurant.menus[foodTime].length; i++){
-        restaurant.menus[foodTime].splice(i, 1)
-        return `No one is eating our ${typeOfFood} - it has been removed from the ${foodTime} menu!`
-      }
+  if (restaurant.menus[foodTime] !== undefined) {
+    for (var i = 0; i < restaurant.menus[foodTime].length; i++) {
+      restaurant.menus[foodTime].splice(i, 1)
+      return `No one is eating our ${typeOfFood} - it has been removed from the ${foodTime} menu!`
     }
-    if (!restaurant.menus[foodTime].includes(typeOfFood)){
-        return `Sorry, we don't sell ${typeOfFood}, try adding a new recipe!`
-      }
-    }
-
+  }
+  if (!restaurant.menus[foodTime].includes(typeOfFood)) {
+    return `Sorry, we don't sell ${typeOfFood}, try adding a new recipe!`
+  }
+}
 
 
 module.exports = {
